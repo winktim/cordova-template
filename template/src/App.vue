@@ -3,8 +3,7 @@
     <v-ons-splitter>
       <v-ons-splitter-side swipeable collapse width="250px"
         :animation="$ons.platform.isAndroid() ? 'overlay' : 'reveal'"
-        :open.sync="menuIsOpen"
-      >
+        :open.sync="menuIsOpen">
         <menu-page></menu-page>
       </v-ons-splitter-side>
 
@@ -16,14 +15,12 @@
 </template>
 
 <script>
-{{#unless router}}
 import HomePage from './components/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import MenuPage from './components/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-{{/unless}}
 export default {
-  name: 'app'{{#router}},
-  data() {
+  name: 'app',
+  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
       menuIsOpen: false{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

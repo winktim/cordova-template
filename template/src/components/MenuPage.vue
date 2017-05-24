@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'menu',
-  data() {
+  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
       msg: 'Welcome to Your Vue.js App',
       essentialLinks: [
@@ -45,14 +45,14 @@ export default {
         {
           label: 'Playground',
           link: 'https://tutorial.onsen.io/',
-          icon: 'fa-graduation-cap',
+          icon: 'fa-graduation-cap'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
         }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   },
   methods: {
-    goTo(url) {
-      window.open(url, '_blank');
+    goTo{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}(url) {
+      window.open(url, '_blank'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}

@@ -46,7 +46,7 @@
 <script>
 export default {
   name: 'home',
-  data() {
+  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
       msg: 'Welcome to Your Vue.js + Onsen UI App',
       essentialLinks: [
@@ -77,10 +77,10 @@ export default {
         }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       ]{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  },
   methods: {
-    goTo(url) {
-      window.open(url, '_blank');
+    goTo{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}(url) {
+      window.open(url, '_blank'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
