@@ -1,6 +1,6 @@
 <template>
   <v-ons-page>
-    <v-ons-toolbar>
+    <v-ons-toolbar class="home-toolbar">
       <div class="left">
         <v-ons-toolbar-button @click="$emit('toggleMenu')">
           <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>

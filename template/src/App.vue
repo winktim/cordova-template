@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page>
+  <v-ons-page id="app">
     <v-ons-splitter>
       <v-ons-splitter-side swipeable collapse width="250px"
         :animation="$ons.platform.isAndroid() ? 'overlay' : 'reveal'"
