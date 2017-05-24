@@ -1,34 +1,43 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    {{#router}}
-    <router-view></router-view>
-    {{else}}
-    <hello></hello>
-    {{/router}}
-  </div>
+  <v-ons-page>
+    <v-ons-splitter>
+      <v-ons-splitter-side swipeable collapse width="250px"
+        :animation="$ons.platform.isAndroid() ? 'overlay' : 'reveal'"
+        :open.sync="menuIsOpen"
+      >
+        <menu-page></menu-page>
+      </v-ons-splitter-side>
+
+      <v-ons-splitter-content>
+        <home-page @toggleMenu="menuIsOpen = !menuIsOpen"></home-page>
+      </v-ons-splitter-content>
+    </v-ons-splitter>
+  </v-ons-page>
 </template>
 
 <script>
 {{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import HomePage from './components/HomePage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MenuPage from './components/MenuPage'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 {{/unless}}
 export default {
-  name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
+  name: 'app'{{#router}},
+  data() {
+    return {
+      menuIsOpen: false{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  },
   components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
+    HomePage,
+    MenuPage{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+ons-splitter-side[side=left][animation=overlay] {
+  border-right: 1px solid #BBB;
 }
 </style>
