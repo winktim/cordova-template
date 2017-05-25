@@ -6,7 +6,7 @@
           <v-ons-icon icon="ion-navicon, material:md-menu"></v-ons-icon>
         </v-ons-toolbar-button>
       </div>
-      <div class="center">Welcome</div>
+      <div class="center">\{{ msg }}</div>
     </v-ons-toolbar>
 
     <div class="header">
@@ -48,7 +48,7 @@ export default {
   name: 'home',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
-      msg: 'Welcome to Your Vue.js + Onsen UI App',
+      msg: 'Welcome',
       essentialLinks: [
         {
           label: 'Core Docs',

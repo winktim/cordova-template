@@ -20,7 +20,6 @@ export default {
   name: 'menu',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
-      msg: 'Welcome to Your Vue.js App',
       essentialLinks: [
         {
           label: 'Docs',
