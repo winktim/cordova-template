@@ -88,5 +88,7 @@ module.exports = {
     "test/e2e/**/*": "e2e"
     // "src/router/**/*": "router"
   },
-  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
+  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at\n\nhttps://vuejs-templates.github.io/webpack\n" +
+    "https://onsen.io/v2/guide/\n\nThis template can be quickly deployed as a Cordova App.\nBy using Monaca CLI you can easily Preview, Debug, Build\nand Publish your App in no time. To get started, check:\n\n" +
+    "https://docs.monaca.io/en/monaca_cli/samples/vue_onsen/\n"
 };
