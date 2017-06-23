@@ -8,6 +8,8 @@
 
 - [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+- [For Onsen UI](https://onsen.io/v2/guide/): complete guide about how to get started with Onsen UI
+- [For Monaca CLI](https://docs.monaca.io/en/monaca_cli/samples/vue_onsen/): a step-to-step guide about how to use this template with Monaca CLI
 
 ## Usage
 
