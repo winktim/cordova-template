@@ -1,8 +1,6 @@
-# vue-webpack-boilerplate
+# vue-cordova-webpack
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
-
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
 
 ## Documentation
 
@@ -41,7 +39,7 @@ If port 8080 is already in use on your machine you must change the port number i
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
   - Use `npm run build --report`to build with bundle size analytics.
 
-- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
+- `npm run unit`: Unit tests run in Google Chrome headless with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
   - Supports ES2015+ in test files.
   - Supports all webpack loaders.
   - Easy mock injection.
