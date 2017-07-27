@@ -7,10 +7,13 @@ import 'onsenui/css/onsen-css-components.css'{{#if_eq lintConfig "airbnb"}};{{/i
 
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import VueOnsen from 'vue-onsenui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{#vuex}}
+import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/vuex}}
 {{#router}}
 import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/router}}
+import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
@@ -22,6 +25,9 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  {{#vuex}}
+  store,
+  {{/vuex}}
   {{#if_eq build "runtime"}}
   render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   {{/if_eq}}
