@@ -76,7 +76,7 @@ module.exports = {
     },
     "unit": {
       "type": "confirm",
-      "message": "Setup unit tests with Karma + Mocha?"
+      "message": "Set up unit tests with Karma + Mocha?"
     },
     "e2e": {
       "type": "confirm",
