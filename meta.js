@@ -87,7 +87,7 @@ module.exports = {
     ".eslintrc.js": "lint",
     ".eslintignore": "lint",
     "config/test.env.js": "unit || e2e",
-    "build/webpack.test.conf.js": "e2e || (unit && runner === 'karma')",
+    "build/webpack.test.conf.js": "unit",
     "test/unit/**/*": "unit",
     "build/webpack.test.conf.js": "unit",
     "test/e2e/**/*": "e2e",
