@@ -14,12 +14,10 @@ module.exports = {
       "required": true,
       "message": "Project name (all lowercase)"
     },
-    "prompts": {
-      "package": {
-        "type": "string",
-        "required": true,
-        "message": "Package name (ex: io.cordova.helloworld)"
-      },
+    "package": {
+      "type": "string",
+      "required": true,
+      "message": "Package name (ex: io.cordova.helloworld)"
     },
     "description": {
       "type": "string",
