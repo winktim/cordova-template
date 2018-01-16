@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="container">
-            <span>You are {{ isAndroid ? "on" : "not on" }} android</span>
+            <span>You are \{{ isAndroid ? "on" : "not on" }} android</span>
         </div>
     </div>
 </template>
