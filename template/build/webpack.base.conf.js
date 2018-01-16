@@ -63,13 +63,17 @@ module.exports = {
                     name: utils.assetsPath("fonts/[name].[hash:7].[ext]"),
                     publicPath: process.env.NODE_ENV === "production" ? "../../" : "/"
                 }
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: "sass-loader",
+                    options: {
+                        includePaths: [resolve("node_modules/bootstrap/scss/")]
+                    }
+                }]
             }
-        ],
-        sassLoader: {
-            includePaths: [
-                resolve("node_modules/bootstrap/scss/"),
-            ],
-        },
+        ]
     },
     node: {
         // prevent webpack from injecting useless setImmediate polyfill because Vue

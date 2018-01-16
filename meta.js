@@ -37,5 +37,5 @@ module.exports = {
   "filters": {
     "src/store.js": "vuex"
   },
-  "completeMessage": "Run\n\n {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n"
+  "completeMessage": "Run\n\n cd {{destDirName}}\n{{/inPlace}}npm install\n"
 }

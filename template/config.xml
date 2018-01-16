@@ -4,8 +4,8 @@
     <description>
       {{ description }}
     </description>
-    <author email="{{ author }}@divtec.ch" href="https://divtec.ch">
-      {{ author }}
+    <author email="{{ author }}" href="https://divtec.ch">
+      Author's name here
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -24,6 +24,7 @@
     </platform>
     <!-- build webpack avant de compiler cordova -->
     <hook type="before_compile" src="build/build.js"/>
+    <hook type="before_deploy" src="build/build.js"/>
 
     <!-- plugins -->
     <plugin name="cordova-plugin-whitelist" spec="1" />

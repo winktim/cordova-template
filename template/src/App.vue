@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="container">
-            <span>You are \{{ isAndroid ? "on" : "not on" }} android</span>
+            <span>Hello at \{{ Date.now() }}</span>
         </div>
     </div>
 </template>
@@ -10,9 +10,7 @@
 export default {
     name: "app",
     data() {
-        return {
-            isAndroid: $ons.platform.isAndroid()
-        }
+        return {}
     },
     components: {}
 }
