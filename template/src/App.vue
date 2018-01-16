@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="container">
-            <span>You are {{ $ons.platform.isAndroid() ? "on" : "not on" }} android</span>
+            <span>You are {{ isAndroid ? "on" : "not on" }} android</span>
         </div>
     </div>
 </template>
@@ -10,7 +10,9 @@
 export default {
     name: "app",
     data() {
-        return {}
+        return {
+            isAndroid: $ons.platform.isAndroid()
+        }
     },
     components: {}
 }
