@@ -7,7 +7,7 @@
 </template>
 
 <script>
-require("bootstrap-loader")
+import 'bootstrap';
 export default {
     name: "app",
     data() {
@@ -18,4 +18,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "~bootstrap/scss/bootstrap";
 </style>

@@ -6,17 +6,16 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js",
-    "browser": "npm run build && cordova run browser",
-    "device": "npm run build && cordova run android",
-    "emulate": "npm run build && cordova emulate android"
+    "build": "node build/build.js"
   },
   "dependencies": {
-    "onsenui": "~2.7.2",
+    "onsenui": "^2.8.3",
     "vue": "^2.5.0",
-    "vue-onsenui": "~2.3.0"{{#vuex}},
+    "vue-onsenui": "^2.4.3"{{#vuex}},
     "vuex": "^3.0.0"{{/vuex}},
-    "bootstrap": "^4.0.0-beta"
+    "bootstrap": "4.0.0-alpha.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -35,8 +34,6 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "webpack-bundle-analyzer": "^2.9.0",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
     "postcss-url": "^7.3.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
@@ -44,7 +41,6 @@
     "ora": "^1.2.0",
     "rimraf": "^2.6.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
-    "style-loader": "^0.19.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
@@ -56,7 +52,7 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "exports-loader": "^0.6.4",
-    "imports-loader": "^0.7.1",
+    "imports-loader": "^0.7.1"
   },
   "engines": {
     "node": ">= 4.0.0",
