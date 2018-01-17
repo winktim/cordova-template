@@ -15,7 +15,8 @@ Vue.use(VueOnsen)
 
 document.addEventListener("deviceready", main)
 
-if(WEBPACK_IS_PRODUCTION) {
+// manually trigger deviceready event if we are in dev mode
+if(process.env.NODE_ENV === "development") {
     document.dispatchEvent(new CustomEvent("deviceready", {}))
     console.log("dispatched 'deviceready' manually")
 }
