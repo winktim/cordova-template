@@ -97,6 +97,7 @@ module.exports = {
             Tab: "exports-loader?Tab!bootstrap/js/dist/tab",
             Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
             Util: "exports-loader?Util!bootstrap/js/dist/util",
+            WEBPACK_IS_PRODUCTION: process.env.NODE_ENV === "production"
         })
     ]
 }

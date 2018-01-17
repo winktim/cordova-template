@@ -48,7 +48,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "index.html",
-            inject: true
+            inject: true,
+            cordova: "<script src=\"platforms/browser/platform_www/cordova.js\"></script>"
         }),
     ]
 })

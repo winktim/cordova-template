@@ -7,7 +7,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ name }}</title>
-    <!-- inclu cordova.js seulement en cas de build production -->
+    <!-- inclu cordova.js en prod ou la version browser en dev -->
     <%= htmlWebpackPlugin.options.cordova || '' %>
   </head>
   <body>

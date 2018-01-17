@@ -13,11 +13,21 @@ Vue.config.productionTip = false
 
 Vue.use(VueOnsen)
 
-new Vue({
-    el: "#app",
-    {{#vuex}}
-    store,
-    {{/vuex}}
-    template: "<App/>",
-    components: { App }
-})
+document.addEventListener("deviceready", main)
+
+if(WEBPACK_IS_PRODUCTION) {
+    document.dispatchEvent(new CustomEvent("deviceready", {}))
+    console.log("dispatched 'deviceready' manually")
+}
+
+function main()
+{
+    new Vue({
+        el: "#app",
+        {{#vuex}}
+        store,
+        {{/vuex}}
+        template: "<App/>",
+        components: { App }
+    })
+}
