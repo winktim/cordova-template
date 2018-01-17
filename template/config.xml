@@ -22,9 +22,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <!-- build webpack avant de compiler cordova -->
-    <hook type="before_compile" src="build/build.js"/>
-    <hook type="before_deploy" src="build/build.js"/>
 
     <!-- plugins -->
     <plugin name="cordova-plugin-whitelist" spec="1" />

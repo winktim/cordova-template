@@ -6,7 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "browser": "npm run build && cordova run browser",
+    "emulate": "npm run build && cordova emulate android",
+    "device": "npm run build && cordova run android"
   },
   "dependencies": {
     "onsenui": "^2.8.3",
@@ -15,7 +18,10 @@
     "vuex": "^3.0.0"{{/vuex}},
     "bootstrap": "4.0.0-alpha.2",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.10",
+    "tether": "^1.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
