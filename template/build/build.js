@@ -29,11 +29,12 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err =>
             chunkModules: false
         }) + "\n\n")
 
-        if (stats.hasErrors()) {
-            console.log(chalk.red("  Build failed with errors.\n"))
-            process.exit(1)
-        }
+        const stringEnd = ` at ${new Date().toLocaleTimeString()}.\n`
 
-        console.log(chalk.cyan(`  Last build completed at ${new Date().toLocaleTimeString()}.\n`))
+        if(stats.hasErrors()) {
+            console.log(chalk.red("Build failed" + stringEnd))
+        } else {
+            console.log(chalk.cyan("Build completed" + stringEnd))
+        }
     })
 })
