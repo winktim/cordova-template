@@ -28,5 +28,5 @@ module.exports = {
     "filters": {
         "src/store.js": "vuex"
     },
-    "completeMessage": "Run\n\ncd {{destDirName}}\nnpm install\nnpm run build"
+    "completeMessage": "Run\n\ncd {{destDirName}}\nnpm install\nnpm run build\ncordova platform add browser"
 }

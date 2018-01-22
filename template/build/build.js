@@ -34,6 +34,6 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err =>
             process.exit(1)
         }
 
-        console.log(chalk.cyan("  Build complete. Watching for changes...\n"))
+        console.log(chalk.cyan(`  Last build completed at ${new Date().toLocaleTimeString()}.\n`))
     })
 })
